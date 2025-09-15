@@ -1,0 +1,156 @@
+:root {
+    --bg-dark: #121212;
+    --card-bg: #222222;
+    --border-red: #bd1212;
+    --text-white: #ffffff;
+    --text-light-gray: #dddddd;
+    --button-bg: #222222;
+    --button-active-bg: #ff0000;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.tiendas-modulo {
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.panel {
+    transition: transform 0.3s ease-in-out;
+}
+
+.panel:not(.activo) {
+    display: none;
+    transform: translateX(100%);
+}
+
+.panel.activo {
+    transform: translateX(0);
+}
+
+.panel-titulo {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.red-text {
+    color: var(--border-red);
+}
+
+.lista {
+    max-height: 500px;
+    overflow-y: auto;
+    scrollbar-gutter: stable both-edges;
+}
+
+.lista::-webkit-scrollbar {
+    width: 8px;
+}
+
+.lista::-webkit-scrollbar-thumb {
+    background-color: var(--border-red);
+    border-radius: 4px;
+}
+
+.lista::-webkit-scrollbar-track {
+    background-color: var(--card-bg);
+}
+
+.estado-item, .tienda-card {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    background-color: rgb(203, 203, 203);
+    color: #222222;
+    border: 1px solid #444444;
+    border-radius: 5px;
+    padding: 13px;
+    margin-right: 7px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.estado-item:hover {
+    background-color: #bd1212;
+    color: #dddddd;
+}
+
+.estado-item.activo {
+    background-color: var(--button-active-bg);
+    border-color: var(--button-active-bg);
+}
+
+.tienda-card {
+    border-color: var(--border-red);
+    background-color: var(--bg-dark);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 7px;
+    margin-bottom: 25px;
+}
+
+.tienda-info {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.tienda-info h3 {
+    color: #dddddd;
+    margin: 0 0 5px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+.tienda-info p {
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+    color: var(--text-light-gray);
+}
+
+.volver-btn {
+    background: none;
+    border: none;
+    color: var(--text-light-gray);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.volver-btn:hover {
+    color: #bd1212;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.no-tiendas {
+    text-align: center;
+    color: var(--text-light-gray);
+    padding: 20px;
+}
