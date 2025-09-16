@@ -25,7 +25,6 @@ const datosTiendas = {
     ],
     "Cojedes": [],
     "Delta Amacuro": [],
-    "Dependencias Federales": [],
     "Distrito Capital": [
         { nombre: "INVERSIONES SUNIAKA 777 CA", telefono: "04242416464", direccion: "ESQ DE MIRANDO EDIF JUANITA PISO PB LOCAL B SECTOR SAN AGUSTIN NORTE CARACAS DISTRITO CAPITAL", tipo: "PREMIUM" },
         { nombre: "RHINO TOYO PARTS CA", telefono: "04242121072", direccion: "AV EL STADIUM QTA LAS TRES MARIAS NRO LOCAL 5 URB LOS CHAGUARAMOS CARACAS DISTRITO CAPITAL", tipo: "PREMIUM" },
